@@ -2,8 +2,10 @@
 const nextConfig = {
     reactStrictMode: true,
 }
+const {i18n} = require("./next-i18next.config");
 
 module.exports = {
+    i18n,
     nextConfig,
     images: {
         loader: 'akamai',
@@ -11,7 +13,8 @@ module.exports = {
     },
     assetPrefix:
         process.env.NODE_ENV === "production"
-            ? "https://boramyy.github.io/invitation"
+            ? "https://handyo.github.io/seo"
             : "",
+
 
 }
