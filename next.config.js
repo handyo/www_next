@@ -16,5 +16,13 @@ module.exports = {
             ? "https://handyo.github.io/seo"
             : "",
 
-
+    async redirects() {
+        return [
+            {
+                source: "/en/Sub1",
+                destination: "/Sub1", //안되네
+                permanent: false
+            }
+        ]
+    }
 }
