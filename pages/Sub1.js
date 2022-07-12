@@ -4,14 +4,11 @@ import HeadMeta from "../component/HeadMeta";
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations'
 import {useTranslation} from 'next-i18next'
 
-export async function getStaticProps({locale}) {
-    return {
-        props: {
-            ...(await serverSideTranslations(locale, ['common'])),
-            //locale
-        },
-    }
-}
+export const getStaticProps = async ({locale}) => ({
+    props: {
+        ...(await serverSideTranslations(locale, ["common"])),
+    },
+});
 
 function Sub1(props) {
     const {t} = useTranslation("common");

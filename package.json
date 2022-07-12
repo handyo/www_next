@@ -8,13 +8,14 @@
         "start": "next start",
         "lint": "next lint",
         "build": "next build",
-        "export": "next export"
+        "exp     ort": "next export"
     },
     "dependencies": {
         "next": "12.1.6",
         "next-i18next": "^11.0.0",
         "react": "18.2.0",
-        "react-dom": "18.2.0"
+        "react-dom": "18.2.0",
+        "sass": "^1.53.0"
     },
     "devDependencies": {
         "eslint": "8.18.0",
