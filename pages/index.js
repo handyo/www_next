@@ -1,9 +1,19 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 import HeadMeta from "../component/HeadMeta";
 
+import {serverSideTranslations} from 'next-i18next/serverSideTranslations'
+import {useTranslation} from 'next-i18next'
+
+export const getStaticProps = async ({locale}) => ({
+    props: {
+        ...(await serverSideTranslations(locale, ["common"])),
+    },
+});
+
 export default function Home() {
+    const {t} = useTranslation("common");
     return (
         <div className={styles.container}>
             <HeadMeta title="메인" keyword="메인키워드" description="설명글 메인" url="www.valofe.com"

@@ -1,3 +1,4 @@
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import '../styles/globals.scss'
 import {seoContextProvider} from "../context/context";
 import {prefix} from "../config/config";
